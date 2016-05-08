@@ -51,6 +51,9 @@ class Decider(object):
         self._youtube = youtube_client
         self._db = db_client
         self._priority_queue = Queue.PriorityQueue()
+        self._priority_queue.put(Song('Shia',
+                                      'https://www.youtube.com/watch?v=o0u4M6vppCI',
+                                      1000))
         self._last_id = 0
 
     def _populate_queue(self):
