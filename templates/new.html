@@ -10,31 +10,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.deep_purple-indigo.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <img class="mdl-layout-icon" src="{{ url_for('static', filename='images/logo.png') }}"></img>
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">iguaz.io Music Voter</span>
+          <span class="mdl-layout-title">&nbsp;iguaz.io Music Voter</span>
         </div>
       </header>
 
       <main class="mdl-layout__content">
         <div class="mdl-grid">
-            <div class="mdl-cell mdl-cell--3-col"></div>
-            <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-cell mdl-cell--12-col">
                 <form action="#">
                   <div class="mdl-textfield--strech mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="query">
@@ -42,22 +30,21 @@
                   </div>
                 </form>
             </div>
-            <div class="mdl-cell mdl-cell--3-col"></div>
-
-            <div class="mdl-cell mdl-cell--3-col"></div>
-            <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-cell mdl-cell--8-col">Playing Now</div>
+            <div class="mdl-cell mdl-cell--4-col">Up Next</div>
+            <div class="mdl-cell mdl-cell--8-col">
                 <div class="mdl-card mdl-shadow--4dp">
                   <div class="mdl-card__title"  style="background: url(https://f4.bcbits.com/img/a3129419306_16.jpg) center / cover;">
                       <h2 class="mdl-card__title-text">The Wrath of Code</h2>
                   </div>
                   <div class="mdl-card__actions mdl-card--border">
                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Vote Skip
+                        Vote to Skip
                       </a>
                   </div>
                 </div>
             </div>
-            <div class="mdl-cell mdl-cell--2-col">
+            <div class="mdl-cell mdl-cell--4-col">
                 <div class="mdl-card mdl-shadow--4dp">
                   <div class="mdl-card__title"  style="background: url(http://i.imgur.com/Zd9zKCC.jpg) center / cover;">
                       <h2 class="mdl-card__title-text">Everybody Talks</h2>
@@ -69,8 +56,6 @@
                   </div>
                 </div>
             </div>
-            <div class="mdl-cell mdl-cell--3-col"></div>
-        </div>
       </main>
     </div>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>

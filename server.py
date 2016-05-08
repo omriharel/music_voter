@@ -41,7 +41,7 @@ def show_songs():
 
 @app.route('/new')
 def show_new():
-    return render_template('new.html')
+    return render_template('new.html', playing_now={}, up_next=None)
 
 
 @app.route('/songs', methods=['POST'])
