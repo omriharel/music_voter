@@ -12,7 +12,6 @@
   <ul class=songs>
   {% for song in songs %}
     <li><h2>{{ song.title }}</h2>{{ song.link|safe }} || votes: <b>{{ song.votes }}</b>
-      
   {% else %}
     <li><em>Unbelievable.  No songs here so far</em>
   {% endfor %}
