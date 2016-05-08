@@ -1,0 +1,18 @@
+.mdl-textfield--strech {
+  width: 100%;
+}
+
+.mdl-card {
+  width: 100%;
+  height: 350px;
+}
+
+.mdl-card__title {
+  height: 100%;
+  color: #fff;
+  text-shadow: 1px 1px #222;
+}
+
+.mdl-card__actions {
+  height: 52px;
+}

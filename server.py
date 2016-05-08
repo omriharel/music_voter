@@ -39,6 +39,11 @@ def show_songs():
     return render_template('show_songs.html', songs=songs)
 
 
+@app.route('/new')
+def show_new():
+    return render_template('new.html')
+
+
 @app.route('/songs', methods=['POST'])
 def post_songs():
     g.db.execute('insert into songs (title, link, votes) values (?, ?, ?)',
