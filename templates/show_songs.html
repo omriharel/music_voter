@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form action="{{ url_for('add_song') }}" method=post class=add-song>
+    <dl>
+      <dt>Title:
+      <dd><input type=text size=30 name=title>
+      <dt>Text:
+      <dd><input type=text size=80 name=link>
+      <dd><input type=submit value=Share>
+    </dl>
+  </form>
+  <ul class=songs>
+  {% for song in songs %}
+    <li><h2>{{ song.title }}</h2>{{ song.link|safe }} || votes: <b>{{ song.votes }}</b>
+      
+  {% else %}
+    <li><em>Unbelievable.  No songs here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
