@@ -39,12 +39,12 @@ def show_songs():
     return render_template('show_songs.html', songs=songs)
 
 
-@app.route('/add', methods=['POST'])
-def add_song():
+@app.route('/songs', methods=['POST'])
+def post_songs():
     g.db.execute('insert into songs (title, link, votes) values (?, ?, ?)',
                  [request.form['title'], request.form['link'], 0])
     g.db.commit()
-    flash('New Song was added to be vote on')
+    flash('New song was added to be voted on')
     return redirect(url_for('show_songs'))
 
 

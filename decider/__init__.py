@@ -82,6 +82,7 @@ class Decider(object):
                 self._db.close()
                 raise
 
+
 if __name__ == '__main__':
     youtube_client = youtube.Client()
     sql_client = Sqlite3Wrapper('/tmp/music_voter.db')
