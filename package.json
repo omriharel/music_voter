@@ -79,5 +79,14 @@
   "scripts": {
     "test": "./node_modules/.bin/gulp test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-material": "^1.0.8",
+    "angular-material-icons": "^0.7.0",
+    "angular-messages": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-sanitize": "^1.5.5"
+  }
 }
