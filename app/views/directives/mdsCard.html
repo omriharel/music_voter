@@ -1,4 +1,7 @@
 <div layout="column" flex>
+    <div ng-if="typeDependent.hr != undefined" class="mds-card-pretext">
+        {{ typeDependent.hr }}
+    </div>
     <md-card class="mds-card" style="background: url({{ song.thumbnail }}) center / cover">
         <md-card-title>
             <md-card-title-text>
