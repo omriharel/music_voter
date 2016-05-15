@@ -2,10 +2,10 @@
     <div class="row-search" layout="row">
         <md-input-container flex>
             <label>Add song</label>
-            <input ng-model="query">
+            <input ng-model="query" />
         </md-input-container>
     </div>
-    <md-content layout="column" flex>
+    <md-content class="cards-container" layout="column" flex>
         <div class="row-main" layout="row" layout-fill layout-wrap>
             <mds-card type="now-playing" song="home.songs[0]"></mds-card>
             <mds-card type="up-next" song="home.songs[1]"></mds-card>

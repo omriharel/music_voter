@@ -1,17 +1,52 @@
 @import 'vars';
 
-.lightblue {
-  background-color: lightblue;
-}
-.lightgreen {
-  background-color: lightgreen;
-}
-
 .container {
   max-width: 65%;
   align-self: center
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .mds-card {
+  height: 370px;
+}
+
+.mds-card-normal {
   height: 270px;
+}
+
+.mds-card-pretext {
+  padding-left: 8px;
+  font-size: larger;
+}
+
+.mds-card-filler {
+  height: 100%;
+}
+
+.mds-card-like-action, .mds-card-skip {
+  align-self: flex-end;
+}
+
+.mds-card-title {
+  padding: 6px;
+  padding-bottom: 20px;
+}
+
+.mds-card-dark-background {
+  color: #fff;
+  text-shadow: 1px 2px 3px #000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mds-card-light-background {
+  background-color: #eee;
+}
+
+.mds-card-now-playing-bottom {
+  padding: 10px;
+  padding-bottom: 12px;
+  margin: 0px;
 }

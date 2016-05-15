@@ -1,16 +1,21 @@
 <div layout="column" flex>
-    <div ng-if="typeDependent.hr != undefined" class="mds-card-pretext">
-        {{ typeDependent.hr }}
+    <div ng-if="type != undefined" class="mds-card-pretext">
+        {{ typeProps.hr }}
     </div>
     <md-card class="mds-card" style="background: url({{ song.thumbnail }}) center / cover">
-        <md-card-title>
-            <md-card-title-text>
-                <span class="md-headline">{{ song.title }}</span>
-            </md-card-title-text>
-        </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-            <md-button>Like it</md-button>
-            <md-button>Vote skip</md-button>
+        <md-card-icon-actions ng-if="type != 'now-playing'" class="mds-card-like-action">
+            <md-button class="md-fab md-mini md-primary">
+                <md-icon aria-label="Like this song">favorite_border</md-icon>
+            </md-button>
+        </md-card-icon-actions>
+        <span class="mds-card-filler"></span>
+        <md-card-actions ng-if="type == 'now-playing'" class="mds-card-now-playing-bottom mds-card-dark-background">
+            <span class="md-headline">
+                {{ song.title }}&nbsp;&nbsp;&nbsp;<md-button class="md-accent md-raised">Vote Skip</md-button>
+            </span>
         </md-card-actions>
+        <md-card-footer ng-if="type == undefined" class="mds-card-dark-background">
+            {{ song.title }}
+        </md-card-footer>
     </md-card>
 </div>

@@ -3,7 +3,9 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider, $mdThem
 
   $locationProvider.html5Mode(true);
 
-  $mdThemingProvider.theme('default').dark();
+  $mdThemingProvider.theme('default')
+      .primaryPalette('indigo')
+      .accentPalette('deep-purple');;
 
   $stateProvider
   .state('Home', {
