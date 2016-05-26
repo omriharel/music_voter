@@ -1,12 +1,12 @@
-<div class="container" layout="column" layout-align="center" flex>
-    <div class="row-search" layout="row">
-        <md-input-container flex>
+<div class="mds-container" layout="column" layout-align="center" flex>
+    <div class="mds-row-search" layout="row">
+        <md-input-container class="mds-input-container-search" flex>
             <label>Add song</label>
             <input ng-model="query" />
         </md-input-container>
     </div>
-    <md-content class="cards-container" layout="column" flex>
-        <div class="row-main" layout="row" layout-fill layout-wrap>
+    <md-content class="mds-cards-container" layout="column" flex>
+        <div class="mds-row-cards-main" layout="row" layout-fill layout-wrap>
             <mds-card type="now-playing" song="home.songs[0]"></mds-card>
             <mds-card type="up-next" song="home.songs[1]"></mds-card>
             <mds-card ng-repeat="song in home.songs track by $index"

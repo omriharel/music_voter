@@ -1,21 +1,33 @@
 <div layout="column" flex>
-    <div ng-if="type != undefined" class="mds-card-pretext">
+    <!-- The two uppermost cards have textual role indicators -->
+    <div ng-if="type != undefined" class="mds-textual-role-indicator">
         {{ typeProps.hr }}
     </div>
-    <md-card class="mds-card" style="background: url({{ song.thumbnail }}) center / cover">
+
+    <!-- Song thumbnail appears as background for card -->
+    <md-card class="mds-card" style="background: url({{ song.thumbnail }}) center / cover" flex>
+
+        <!-- All songs but "playing now" have a like button in the top right -->
         <md-card-icon-actions ng-if="type != 'now-playing'" class="mds-card-like-action">
             <md-button class="md-fab md-mini md-primary">
                 <md-icon aria-label="Like this song">favorite_border</md-icon>
             </md-button>
         </md-card-icon-actions>
+
+        <!-- Filler that streches vertically as needed -->
         <span class="mds-card-filler"></span>
-        <md-card-actions ng-if="type == 'now-playing'" class="mds-card-now-playing-bottom mds-card-dark-background">
-            <span class="md-headline">
-                {{ song.title }}&nbsp;&nbsp;&nbsp;<md-button class="md-accent md-raised">Vote Skip</md-button>
-            </span>
-        </md-card-actions>
-        <md-card-footer ng-if="type == undefined" class="mds-card-dark-background">
+
+        <!-- All cards have a dark background footer with the title, it's larger for the first two -->
+        <md-card-footer ng-class="{
+            'mds-card-large-footer': type != undefined,
+            'mds-card-regular-footer': type == undefined
+         }" class="mds-card-dark-background">
             {{ song.title }}
+
+            <!-- The main card also has a skip button -->
+            <md-card-actions ng-if="type == 'now-playing'" class="mds-card-skip-action">
+                <md-button class="md-accent md-raised">Vote Skip</md-button>
+            </md-card-actions>
         </md-card-footer>
     </md-card>
 </div>
